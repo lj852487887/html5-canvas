@@ -62,9 +62,18 @@
       var height = canvas.height;
       var ctx = canvas.getContext("2d");
       // Your code here
-      ctx.drawImage(image,0,0,width,height);
-      drawMemeText(ctx,topLine,width/2,60);
-      drawMemeText(ctx,bottomLine,width/2,480);
+      // 
+      if (image!=null) {
+        ctx.drawImage(image,0,0,width,height);
+      };
+
+      if (topLine!=null) {  
+        drawMemeText(ctx,topLine,width/2,60);};
+
+      if (bottomLine!=null) {
+        drawMemeText(ctx,bottomLine,width/2,heigh-20);
+      };
+
 
     }
     
